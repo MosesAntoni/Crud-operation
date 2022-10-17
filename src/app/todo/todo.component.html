@@ -1,0 +1,13 @@
+<div class="p-20">
+    <button *ngIf="!showAdd && !todo "(click)="add(todo)">Add</button>
+    <button *ngIf="showAdd || todo" (click)="back(todo)" ></button>
+    <button *ngIf="!todos" (click)="getData()">get All data</button>
+</div> 
+
+{{message}}
+
+<!-- <div class="todoContainer" *ngIf="!showAdd && !todo; else todoTemplate">
+    <div *ngFor="let todo of todos">
+        <div (click)="openTodo(todo)">{{todo.title}}</div>
+    </div>
+</div> -->
